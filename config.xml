@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets" version="1.0.0.0" id="com.inquireata.abaca">
+
+<name>CompuGrade</name>
+<author>Systems Plus</author>
+<icon src="icon.png" />
+<content src="index.html" />
+<feature id="blackberry.app">
+	<param name="orientation" value="portrait" />
+</feature>
+
+<access uri="*" subdomains="true"/>
+
+<access uri="http://gcccs.org" subdomains="true"/>
+
+<access origin="*" subdomains="true" />
+<access origin="http://gcccs.org" subdomains="true" />
+ 
+  <rim:permissions>
+  <rim:permit>access_shared</rim:permit>
+  </rim:permissions>
+
+</widget>

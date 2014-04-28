@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+		.myRotate{
+		width: 200px;
+		height: 200px;
+		position: relative;
+		background-image: url('demo.png');
+		-webkit-animation: myAnimation 5s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;		
+		}
+
+		@-webkit-keyframes myAnimation{
+		0% {background-color: red; top: 0px; left: 0px;}
+		25% {background-color:yellow; top: 0px; left: 250px;}
+		50% {background-color: blue; top: 250px; left: 250px;}
+		75% {background-color: orange; top: 250px; left: 0px;}
+		100% {background-color: orange; top: 0px; left: 0px;}
+		}
+
+		
+
+		body{
+		color: red;
+		font-size: 1em;
+		font-family: myFirstFont; 
+		
+		}
+
+		@font-face
+		{
+		font-family: myFirstFont;
+		src: url(trashco.ttf);
+		}
+	</style>
+
+	<script type="text/javascript">
+	function sigaw(){
+	var a = parseInt(document.getElementById('txtOne').value);
+	var b = parseInt(document.getElementById('txtTwo').value);
+	var c = parseInt(document.getElementById('txtThree').value);
+	var avg = (a+b+c)/3;
+	document.getElementById('txtFour').value = avg;
+
+	if(avg>75){
+		document.getElementById('txtFive').value = "PASSED";
+		}
+	else if(avg==75){
+		document.getElementById('txtFive').value = "MERCY";
+		}
+	else{
+		document.getElementById('txtFive').value = "FAILED";
+		}
+	}
+	</script>
+</head>
+<body>
+<h1>An Awesome App</h1>
+<div class="myRotate"></div>
+<input type="text" id="txtOne" placeholder="Enter Prelim" /><br/>
+<input type="text" id="txtTwo" placeholder="Enter Midterm" /><br/>
+<input type="text" id="txtThree" placeholder="Enter Finals" /><br/>
+<input type="text" id="txtFour" placeholder="Average" /><br/>
+<input type="text" id="txtFive" placeholder="Remarks" /><br/>
+<button onClick="sigaw()" >PINDOT ME</button>
+
+</body>
+</html>
+
+

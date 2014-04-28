@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.myRotate{
+		width: 200px;
+		height: 200px;
+		position: relative;
+		background-image: url('demo.png');
+		-webkit-animation: myAnimation 5s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;		
+		}
+
+		@-webkit-keyframes myAnimation{
+		0% {background-color: red; top: 0px; left: 0px;}
+		25% {background-color:yellow; top: 0px; left: 250px;}
+		50% {background-color: blue; top: 250px; left: 250px;}
+		75% {background-color: orange; top: 250px; left: 0px;}
+		100% {background-color: orange; top: 0px; left: 0px;}
+		}
+
+		
+
+		body{
+		color: red;
+		font-size: 4em;
+		font-family: myFirstFont; 
+		
+		}
+
+		@font-face
+		{
+		font-family: myFirstFont;
+		src: url(trashco.ttf);
+		}
+	</style>
+</head>
+<body>
+<p>My Style</p>
+
+<div class="myRotate"></div>
+
+</body>
+</html>
